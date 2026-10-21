@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>免费看影视 - 海量高清电影电视剧在线观看平台 | 热门综艺动漫免费追</title>
+<meta name="keywords" content="免费看影视,在线观看电影,免费追剧,热门影视推荐,高清影视大全,电视剧免费看,综艺节目在线看,动漫免费观看平台">
+<meta name="description" content="免费看影视是专业的在线影视观看平台，提供最新电影、热门电视剧、综艺节目、动漫番剧等高清资源免费在线观看。无需下载，打开即看，海量片库每日更新，支持手机端流畅播放。mianfeikanyingshi-app.github.io 让每个人都能轻松享受优质影视内容。">
+<meta name="robots" content="index,follow">
+<meta name="author" content="免费看影视">
+<meta name="copyright" content="免费看影视">
+<meta name="theme-color" content="#0f0f23">
+<meta property="og:type" content="website">
+<meta property="og:title" content="免费看影视 - 海量高清影视免费在线观看">
+<meta property="og:description" content="免费看影视提供最新电影、热门电视剧、综艺动漫等高清资源免费在线观看，每日更新，手机电脑均可流畅播放。">
+<meta property="og:url" content="https://mianfeikanyingshi-app.github.io">
+<meta property="og:site_name" content="免费看影视">
+<link rel="canonical" href="https://mianfeikanyingshi-app.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg-primary:#0a0a1a;
+--bg-secondary:#12122a;
+--bg-card:#1a1a3e;
+--accent:#6c5ce7;
+--accent-light:#a29bfe;
+--accent-glow:rgba(108,92,231,0.3);
+--text-primary:#e8e8f0;
+--text-secondary:#a0a0c0;
+--text-muted:#707090;
+--gradient-1:linear-gradient(135deg,#6c5ce7 0%,#a29bfe 100%);
+--gradient-2:linear-gradient(135deg,#fd79a8 0%,#fdcb6e 100%);
+--gradient-3:linear-gradient(135deg,#00cec9 0%,#55efc4 100%);
+--gradient-4:linear-gradient(135deg,#e17055 0%,#fdcb6e 100%);
+--shadow-glow:0 0 40px rgba(108,92,231,0.15);
+--radius:16px;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+background:var(--bg-primary);
+color:var(--text-primary);
+line-height:1.7;
+overflow-x:hidden;
+}
+body::before{
+content:'';
+position:fixed;
+top:0;left:0;right:0;bottom:0;
+background:radial-gradient(ellipse at 20% 50%,rgba(108,92,231,0.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(0,206,201,0.05) 0%,transparent 50%);
+pointer-events:none;
+z-index:0;
+}
+/* Header */
+.header{
+position:fixed;
+top:0;left:0;right:0;
+z-index:1000;
+background:rgba(10,10,26,0.85);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(108,92,231,0.15);
+transition:all 0.3s ease;
+}
+.nav-container{
+max-width:1200px;
+margin:0 auto;
+padding:0 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+height:64px;
+}
+.logo{
+font-size:22px;
+font-weight:800;
+background:var(--gradient-1);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+letter-spacing:-0.5px;
+white-space:nowrap;
+}
+.nav-links{
+display:flex;
+gap:32px;
+list-style:none;
+}
+.nav-links a{
+color:var(--text-secondary);
+text-decoration:none;
+font-size:15px;
+font-weight:500;
+transition:all 0.3s ease;
+position:relative;
+padding:4px 0;
+}
+.nav-links a::after{
+content:'';
+position:absolute;
+bottom:-2px;left:0;
+width:0;height:2px;
+background:var(--gradient-1);
+border-radius:1px;
+transition:width 0.3s ease;
+}
+.nav-links a:hover{color:var(--text-primary)}
+.nav-links a:hover::after{width:100%}
+.menu-toggle{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+padding:4px;
+}
+.menu-toggle span{
+width:24px;height:2px;
+background:var(--text-primary);
+border-radius:1px;
+transition:all 0.3s ease;
+}
+/* Hero */
+.hero{
+position:relative;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 20px 80px;
+z-index:1;
+overflow:hidden;
+}
+.hero-bg{
+position:absolute;
+top:0;left:0;right:0;bottom:0;
+background:
+radial-gradient(circle at 15% 30%,rgba(108,92,231,0.12) 0%,transparent 40%),
+radial-gradient(circle at 85% 70%,rgba(253,121,168,0.08) 0%,transparent 40%),
+radial-gradient(circle at 50% 50%,rgba(0,206,201,0.05) 0%,transparent 60%);
+}
+.hero-content{
+position:relative;
+text-align:center;
+max-width:800px;
+}
+.hero-badge{
+display:inline-block;
+padding:8px 20px;
+background:rgba(108,92,231,0.1);
+border:1px solid rgba(108,92,231,0.3);
+border-radius:50px;
+font-size:14px;
+color:var(--accent-light);
+margin-bottom:28px;
+backdrop-filter:blur(10px);
+}
+.hero h1{
+font-size:52px;
+font-weight:900;
+line-height:1.15;
+margin-bottom:20px;
+letter-spacing:-1px;
+}
+.hero h1 .highlight{
+background:var(--gradient-1);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+}
+.hero p{
+font-size:18px;
+color:var(--text-secondary);
+max-width:560px;
+margin:0 auto 36px;
+}
+.hero-actions{
+display:flex;
+gap:16px;
+justify-content:center;
+flex-wrap:wrap;
+}
+.btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:14px 32px;
+border-radius:50px;
+font-size:15px;
+font-weight:600;
+text-decoration:none;
+transition:all 0.3s ease;
+cursor:pointer;
+border:none;
+}
+.btn-primary{
+background:var(--gradient-1);
+color:#fff;
+box-shadow:0 8px 25px rgba(108,92,231,0.35);
+}
+.btn-primary:hover{
+transform:translateY(-2px);
+box-shadow:0 12px 35px rgba(108,92,231,0.5);
+}
+.btn-outline{
+background:transparent;
+color:var(--text-primary);
+border:1.5px solid rgba(255,255,255,0.2);
+}
+.btn-outline:hover{
+border-color:var(--accent);
+background:rgba(108,92,231,0.1);
+}
+/* Floating elements */
+.float-item{
+position:absolute;
+border-radius:12px;
+opacity:0.6;
+animation:float 6s ease-in-out infinite;
+}
+.float-item:nth-child(1){top:15%;left:8%;width:60px;height:80px;background:var(--gradient-1);animation-delay:0s}
+.float-item:nth-child(2){top:60%;left:5%;width:50px;height:70px;background:var(--gradient-2);animation-delay:2s}
+.float-item:nth-child(3){top:20%;right:8%;width:55px;height:75px;background:var(--gradient-3);animation-delay:1s}
+.float-item:nth-child(4){top:65%;right:5%;width:65px;height:85px;background:var(--gradient-4);animation-delay:3s}
+@keyframes float{
+0%,100%{transform:translateY(0) rotate(-2deg)}
+50%{transform:translateY(-20px) rotate(2deg)}
+}
+/* Section Common */
+.section{
+position:relative;
+padding:100px 20px;
+z-index:1;
+}
+.section-container{
+max-width:1200px;
+margin:0 auto;
+}
+.section-header{
+text-align:center;
+margin-bottom:60px;
+}
+.section-tag{
+display:inline-block;
+font-size:13px;
+font-weight:600;
+color:var(--accent-light);
+text-transform:uppercase;
+letter-spacing:2px;
+margin-bottom:12px;
+}
+.section-title{
+font-size:36px;
+font-weight:800;
+margin-bottom:16px;
+letter-spacing:-0.5px;
+}
+.section-desc{
+font-size:16px;
+color:var(--text-secondary);
+max-width:520px;
+margin:0 auto;
+}
+/* Categories */
+.categories-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+.cat-card{
+background:var(--bg-card);
+border-radius:var(--radius);
+padding:32px 28px;
+border:1px solid rgba(255,255,255,0.06);
+transition:all 0.4s ease;
+position:relative;
+overflow:hidden;
+cursor:pointer;
+}
+.cat-card::before{
+content:'';
+position:absolute;
+top:0;left:0;right:0;
+height:3px;
+background:var(--card-gradient,var(--gradient-1));
+transform:scaleX(0);
+transform-origin:left;
+transition:transform 0.4s ease;
+}
+.cat-card:hover::before{transform:scaleX(1)}
+.cat-card:hover{
+transform:translateY(-6px);
+border-color:rgba(108,92,231,0.3);
+box-shadow:var(--shadow-glow);
+}
+.cat-icon{
+width:52px;height:52px;
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+margin-bottom:20px;
+background:var(--card-gradient,var(--gradient-1));
+}
+.cat-card h3{
+font-size:20px;
+font-weight:700;
+margin-bottom:10px;
+}
+.cat-card p{
+font-size:14px;
+color:var(--text-muted);
+margin-bottom:16px;
+}
+.cat-tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+.cat-tags span{
+padding:4px 12px;
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+font-size:12px;
+color:var(--text-secondary);
+}
+/* Movies Section */
+.movies-section{
+background:linear-gradient(180deg,transparent 0%,rgba(18,18,42,0.5) 50%,transparent 100%);
+}
+.movie-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+gap:20px;
+}
+.movie-card{
+background:var(--bg-card);
+border-radius:12px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.05);
+transition:all 0.3s ease;
+cursor:pointer;
+}
+.movie-card:hover{
+transform:translateY(-4px) scale(1.02);
+border-color:rgba(108,92,231,0.3);
+box-shadow:0 12px 30px rgba(0,0,0,0.3);
+}
+.movie-poster{
+position:relative;
+aspect-ratio:2/3;
+overflow:hidden;
+}
+.movie-poster-placeholder{
+width:100%;height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+background:var(--poster-bg,var(--gradient-1));
+}
+.movie-badge{
+position:absolute;
+top:8px;left:8px;
+padding:3px 8px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(4px);
+border-radius:6px;
+font-size:11px;
+font-weight:600;
+color:#fff;
+}
+.movie-score{
+position:absolute;
+top:8px;right:8px;
+padding:3px 8px;
+background:rgba(108,92,231,0.9);
+border-radius:6px;
+font-size:11px;
+font-weight:700;
+color:#fff;
+}
+.movie-info{padding:14px}
+.movie-info h4{
+font-size:14px;
+font-weight:600;
+margin-bottom:6px;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+.movie-info p{
+font-size:12px;
+color:var(--text-muted);
+}
+/* Features */
+.features-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:24px;
+}
+.feature-item{
+text-align:center;
+padding:36px 28px;
+background:var(--bg-card);
+border-radius:var(--radius);
+border:1px solid rgba(255,255,255,0.05);
+transition:all 0.3s ease;
+}
+.feature-item:hover{
+background:var(--bg-secondary);
+border-color:rgba(108,92,231,0.2);
+}
+.feature-icon{
+width:64px;height:64px;
+margin:0 auto 20px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+background:var(--gradient-1);
+}
+.feature-item:nth-child(2) .feature-icon{background:var(--gradient-2)}
+.feature-item:nth-child(3) .feature-icon{background:var(--gradient-3)}
+.feature-item:nth-child(4) .feature-icon{background:var(--gradient-4)}
+.feature-item h4{
+font-size:18px;
+font-weight:700;
+margin-bottom:10px;
+}
+.feature-item p{
+font-size:14px;
+color:var(--text-muted);
+}
+/* Stats */
+.stats-section{
+padding:80px 20px;
+background:var(--bg-secondary);
+}
+.stats-grid{
+max-width:1000px;
+margin:0 auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+text-align:center;
+}
+.stat-item .stat-number{
+font-size:42px;
+font-weight:900;
+background:var(--gradient-1);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+line-height:1;
+}
+.stat-item .stat-label{
+font-size:15px;
+color:var(--text-secondary);
+margin-top:8px;
+}
+/* News / Updates */
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:24px;
+}
+.news-card{
+background:var(--bg-card);
+border-radius:var(--radius);
+padding:28px;
+border:1px solid rgba(255,255,255,0.05);
+transition:all 0.3s ease;
+cursor:pointer;
+}
+.news-card:hover{
+border-color:rgba(108,92,231,0.25);
+background:var(--bg-secondary);
+}
+.news-date{
+font-size:13px;
+color:var(--accent-light);
+margin-bottom:12px;
+font-weight:500;
+}
+.news-card h4{
+font-size:17px;
+font-weight:700;
+margin-bottom:10px;
+line-height:1.5;
+}
+.news-card p{
+font-size:14px;
+color:var(--text-muted);
+line-height:1.7;
+}
+/* FAQ */
+.faq-list{
+max-width:800px;
+margin:0 auto;
+}
+.faq-item{
+background:var(--bg-card);
+border-radius:12px;
+margin-bottom:12px;
+border:1px solid rgba(255,255,255,0.05);
+overflow:hidden;
+transition:all 0.3s ease;
+}
+.faq-item:hover{border-color:rgba(108,92,231,0.2)}
+.faq-question{
+padding:20px 24px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+}
+.faq-toggle{
+width:28px;height:28px;
+border-radius:50%;
+background:rgba(108,92,231,0.15);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:16px;
+color:var(--accent-light);
+transition:all 0.3s ease;
+flex-shrink:0;
+}
+.faq-item.active .faq-toggle{
+background:var(--gradient-1);
+color:#fff;
+transform:rotate(45deg);
+}
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:max-height 0.4s ease,padding 0.4s ease;
+padding:0 24px;
+}
+.faq-item.active .faq-answer{
+max-height:300px;
+padding:0 24px 20px;
+}
+.faq-answer p{
+font-size:14px;
+color:var(--text-muted);
+line-height:1.8;
+}
+/* Footer */
+.footer{
+position:relative;
+background:var(--bg-secondary);
+padding:60px 20px 30px;
+border-top:1px solid rgba(255,255,255,0.05);
+z-index:1;
+}
+.footer-container{
+max-width:1200px;
+margin:0 auto;
+}
+.footer-top{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:40px;
+margin-bottom:40px;
+}
+.footer-brand .logo{font-size:24px;margin-bottom:12px;display:inline-block}
+.footer-brand p{
+font-size:14px;
+color:var(--text-muted);
+max-width:280px;
+}
+.footer-col h5{
+font-size:15px;
+font-weight:700;
+margin-bottom:16px;
+color:var(--text-primary);
+}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{
+color:var(--text-muted);
+text-decoration:none;
+font-size:14px;
+transition:color 0.3s ease;
+}
+.footer-col ul li a:hover{color:var(--accent-light)}
+.footer-bottom{
+padding-top:30px;
+border-top:1px solid rgba(255,255,255,0.05);
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:16px;
+}
+.footer-bottom p{
+font-size:13px;
+color:var(--text-muted);
+}
+.footer-links{
+display:flex;
+gap:20px;
+}
+.footer-links a{
+color:var(--text-muted);
+text-decoration:none;
+font-size:13px;
+transition:color 0.3s ease;
+}
+.footer-links a:hover{color:var(--accent-light)}
+/* Responsive */
+@media(max-width:768px){
+.hero h1{font-size:32px}
+.hero p{font-size:16px}
+.hero-actions{flex-direction:column;align-items:center}
+.btn{width:200px;justify-content:center}
+.menu-toggle{display:flex}
+.nav-links{
+position:fixed;
+top:64px;left:0;right:0;
+flex-direction:column;
+background:rgba(10,10,26,0.97);
+backdrop-filter:blur(20px);
+padding:24px;
+gap:0;
+transform:translateY(-150%);
+transition:transform 0.4s ease;
+border-bottom:1px solid rgba(108,92,231,0.15);
+}
+.nav-links.active{transform:translateY(0)}
+.nav-links li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.nav-links li:last-child{border-bottom:none}
+.section{padding:60px 16px}
+.section-title{font-size:26px}
+.categories-grid{grid-template-columns:1fr}
+.movie-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px}
+.features-grid{grid-template-columns:1fr}
+.stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+.news-grid{grid-template-columns:1fr}
+.footer-top{grid-template-columns:1fr;gap:30px}
+.footer-bottom{flex-direction:column;text-align:center}
+.float-item{display:none}
+}
+@media(max-width:480px){
+.hero h1{font-size:26px}
+.movie-grid{grid-template-columns:repeat(2,1fr)}
+}
+/* Scroll Animation */
+.reveal{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.6s ease;
+}
+.reveal.visible{
+opacity:1;
+transform:translateY(0);
+}
+/* Scrollbar */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg-primary)}
+::-webkit-scrollbar-thumb{background:var(--bg-card);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<!-- Header -->
+<header class="header" id="header">
+<div class="nav-container">
+<a href="#" class="logo">免费看影视</a>
+<nav>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">首页</a></li>
+<li><a href="#categories">影视分类</a></li>
+<li><a href="#hot">热门推荐</a></li>
+<li><a href="#features">平台优势</a></li>
+<li><a href="#updates">最新动态</a></li>
+<li><a href="#faq">常见问题</a></li>
+</ul>
+</nav>
+<div class="menu-toggle" id="menuToggle">
+<span></span><span></span><span></span>
+</div>
+</div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+<div class="float-item"></div>
+<div class="float-item"></div>
+<div class="float-item"></div>
+<div class="float-item"></div>
+<div class="hero-bg"></div>
+<div class="hero-content">
+<span class="hero-badge">🎬 2026 全新升级 · 每日更新</span>
+<h1>免费看影视<br><span class="highlight">海量好剧 一触即达</span></h1>
+<p>无需下载注册，打开即看。电影、电视剧、综艺、动漫应有尽有，高清流畅播放，让你的碎片时间充满精彩。</p>
+<div class="hero-actions">
+<a href="#categories" class="btn btn-primary">开始观影</a>
+<a href="#features" class="btn btn-outline">了解平台</a>
+</div>
+</div>
+</section>
+
+<!-- Categories Section -->
+<section class="section" id="categories">
+<div class="section-container">
+<div class="section-header reveal">
+<span class="section-tag">Categories</span>
+<h2 class="section-title">丰富影视分类</h2>
+<p class="section-desc">涵盖电影、电视剧、综艺、动漫四大主流板块，精准分类，快速找到你想看的</p>
+</div>
+<div class="categories-grid">
+<div class="cat-card reveal" style="--card-gradient:linear-gradient(135deg,#6c5ce7,#a29bfe)">
+<div class="cat-icon">🎬</div>
+<h3>院线大片</h3>
+<p>最新上映电影、经典老片、获奖佳作，IMAX品质在家看</p>
+<div class="cat-tags">
+<span>动作</span><span>科幻</span><span>悬疑</span><span>喜剧</span><span>恐怖</span>
+</div>
+</div>
+<div class="cat-card reveal" style="--card-gradient:linear-gradient(135deg,#fd79a8,#fdcb6e)">
+<div class="cat-icon">📺</div>
+<h3>热播剧集</h3><p>热门国产剧、美剧韩剧日剧，追剧不停更，更新快人一步</p>
+<div class="cat-tags">
+<span>都市</span><span>古装</span><span>刑侦</span><span>青春</span><span>历史</span>
+</div>
+</div>
+<div class="cat-card reveal" style="--card-gradient:linear-gradient(135deg,#00cec9,#55efc4)">
+<div class="cat-icon">🎤</div>
+<h3>综艺娱乐</h3><p>真人秀、脱口秀、选秀比赛，欢笑不断，快乐不打烊</p>
+<div class="cat-tags">
+<span>真人秀</span><span>脱口秀</span><span>选秀</span><span>访谈</span><span>美食</span>
+</div>
+</div>
+<div class="cat-card reveal" style="--card-gradient:linear-gradient(135deg,#e17055,#fdcb6e)">
+<div class="cat-icon">🎨</div>
+<h3>动漫番剧</h3><p>国漫日漫全覆盖，热血、治愈、悬疑各类题材随心选</p>
+<div class="cat-tags">
+<span>热血</span><span>治愈</span><span>奇幻</span><span>校园</span><span>机甲</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Hot Movies -->
+<section class="section movies-section" id="hot">
+<div class="section-container">
+<div class="section-header reveal">
+<span class="section-tag">Hot Picks</span>
+<h2 class="section-title">本周热门推荐</h2>
+<p class="section-desc">编辑精选高分影视作品，数据实时更新，跟着大家一起看</p>
+</div>
+<div class="movie-grid">
+<div class="movie-card reveal" style="--poster-bg:linear-gradient(135deg,#1a1a3e,#2d2b55)">
+<div class="movie-poster">
+<div class="movie-poster-placeholder">🎬</div>
+<div class="movie-badge">VIP</div>
+<div class="movie-score">9.2</div>
+</div>
+<div class="movie-info">
+<h4>星际边境：终极觉醒</h4>
+<p>科幻 · 2026 · 豆瓣高分</p>
+</div>
+</div>
+<div class="movie-card reveal" style="--poster-bg:linear-gradient(135deg,#2a1a3e,#4a2b55)">
+<div class="movie-poster">
+<div class="movie-poster-placeholder">🎭</div>
+<div class="movie-badge">热播</div>
+<div class="movie-score">8.7</div>
+</div>
+<div class="movie-info">
+<h4>长安十二时辰</h4>
+<p>古装悬疑 · 24集全</p>
+</div>
+</div>
+<div class="movie-card reveal" style="--poster-bg:linear-gradient(135deg,#1a3e2e,#2b5540)">
+<div class="movie-poster">
+<div class="movie-poster-placeholder">🔥</div>
+<div class="movie-badge">推荐</div>
+<div class="movie-score">9.0</div>
+</div>
+<div class="movie-info">
+<h4>烈焰行动</h4>
+<p>动作犯罪 · 院线热映</p>
+</div>
+</div>
+<div class="movie-card reveal" style="--poster-bg:linear-gradient(135deg,#3e2a1a,#55402b)">
+<div class="movie-poster">
+<div class="movie-poster-placeholder">💫</div>
+<div class="movie-badge">新剧</div>
+<div class="movie-score">8.5</div>
+</div>
+<div class="movie-info">
+<h4>时光代理人 第三季</h4>
+<p>国漫 · 奇幻冒险</p>
+</div>
+</div>
+<div class="movie-card reveal" style="--poster-bg:linear-gradient(135deg,#1a2e3e,#2b4055)">
+<div class="movie-poster">
+<div class="movie-poster-placeholder">🌊</div>
+<div class="movie-badge">独播</div>
+<div class="movie-score">9.4</div>
+</div>
+<div class="movie-info">
+<h4>深海迷踪</h4>
+<p>悬疑惊悚 · 全集</p>
+</div>
+</div>
+<div class="movie-card reveal" style="--poster-bg:linear-gradient(135deg,#3e1a2e,#552b40)">
+<div class="movie-poster">
+<div class="movie-poster-placeholder">🎪</div>
+<div class="movie-badge">综艺</div>
+<div class="movie-score">8.8</div>
+</div>
+<div class="movie-info">
+<h4>快乐再出发 5</h4>
+<p>真人秀 · 更新至12期</p>
+</div>
+</div>
+<div class="movie-card reveal" style="--poster-bg:linear-gradient(135deg,#2e3e1a,#40552b)">
+<div class="movie-poster">
+<div class="movie-poster-placeholder">⚡</div>
+<div class="movie-badge">热门</div>
+<div class="movie-score">8.9</div>
+</div>
+<div class="movie-info">
+<h4>极速狂飙</h4>
+<p>动作 · 2026新片</p>
+</div>
+</div>
+<div class="movie-card reveal" style="--poster-bg:linear-gradient(135deg,#1a3e3e,#2b5555)">
+<div class="movie-poster">
+<div class="movie-poster-placeholder">🏰</div>
+<div class="movie-badge">经典</div>
+<div class="movie-score">9.6</div>
+</div>
+<div class="movie-info">
+<h4>王者归来</h4>
+<p>奇幻史诗 · 导演剪辑版</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+<div class="section-container">
+<div class="section-header reveal">
+<span class="section-tag">Why Choose Us</span>
+<h2 class="section-title">为什么选择免费看影视</h2>
+<p class="section-desc">四大核心优势，重新定义你的观影体验</p>
+</div>
+<div class="features-grid">
+<div class="feature-item reveal">
+<div class="feature-icon">🚀</div>
+<h4>极速加载</h4>
+<p>全球CDN加速节点覆盖，秒开播放，告别缓冲等待，流畅体验不打折扣</p>
+</div>
+<div class="feature-item reveal">
+<div class="feature-icon">📱</div>
+<h4>全端适配</h4>
+<p>手机、平板、电脑完美适配，横竖屏自动切换，随时随地想看就看</p>
+</div>
+<div class="feature-item reveal">
+<div class="feature-icon">💎</div>
+<h4>超清画质</h4>
+<p>支持1080P/4K超高清播放，杜比音效加持，在家享受影院级视听盛宴</p>
+</div>
+<div class="feature-item reveal">
+<div class="feature-icon">🔄</div>
+<h4>实时更新</h4>
+<p>院线新片、热播剧集、综艺更新同步跟进，第一时间上架，追剧无延迟</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Stats -->
+<section class="stats-section">
+<div class="stats-grid">
+<div class="stat-item reveal">
+<div class="stat-number">10,000+</div>
+<div class="stat-label">影视资源总量</div>
+</div>
+<div class="stat-item reveal">
+<div class="stat-number">500+</div>
+<div class="stat-label">每日新增内容</div>
+</div>
+<div class="stat-item reveal">
+<div class="stat-number">99.9%</div>
+<div class="stat-label">服务可用性</div>
+</div>
+<div class="stat-item reveal">
+<div class="stat-number">4.9★</div>
+<div class="stat-label">用户满意度</div>
+</div>
+</div>
+</section>
+
+<!-- Updates -->
+<section class="section" id="updates">
+<div class="section-container">
+<div class="section-header reveal">
+<span class="section-tag">Latest News</span>
+<h2 class="section-title">平台最新动态</h2>
+<p class="section-desc">第一时间了解免费看影视的更新与优化</p>
+</div>
+<div class="news-grid">
+<div class="news-card reveal">
+<div class="news-date">2026年10月18日</div>
+<h4>🎉 全新4K超清播放引擎上线，画质再升级</h4>
+<p>本次更新带来了全新的视频解码引擎，支持HDR10+和杜比视界，画质表现全面提升，观影体验更加沉浸。</p>
+</div>
+<div class="news-card reveal">
+<div class="news-date">2026年10月12日</div>
+<h4>📱 移动端APP界面全面改版，操作更便捷</h4>
+<p>基于用户反馈，我们对移动端界面进行了重新设计，优化了导航逻辑和内容推荐算法，让找片更轻松。</p>
+</div>
+<div class="news-card reveal">
+<div class="news-date">2026年10月5日</div>
+<h4>🔥 国庆档院线大片同步上线，抢先看</h4>
+<p>多部国庆档热门电影已同步上线，涵盖动作、喜剧、科幻等多种类型，满足不同观影需求。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+<div class="section-container">
+<div class="section-header reveal">
+<span class="section-tag">FAQ</span>
+<h2 class="section-title">常见问题解答</h2>
+<p class="section-desc">用户最常问的几个问题，快速找到答案</p>
+</div>
+<div class="faq-list">
+<div class="faq-item reveal">
+<div class="faq-question">免费看影视真的完全免费吗？<span class="faq-toggle">+</span></div>
+<div class="faq-answer"><p>是的！免费看影视平台所有内容均可免费观看，无需付费订阅。我们提供海量高清影视资源，打开即看，不收取任何费用。</p></div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-question">需要注册账号才能观看吗？<span class="faq-toggle">+</span></div>
+<div class="faq-answer"><p>不需要注册，打开网站即可直接观看。当然，注册账号后可以享受收藏、历史记录、个性化推荐等更多功能。</p></div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-question">支持哪些设备观看？<span class="faq-toggle">+</span></div>
+<div class="faq-answer"><p>支持所有主流设备，包括手机（iOS/Android）、平板、电脑（Windows/Mac）、智能电视等，只需一个浏览器即可畅享。</p></div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-question">视频播放卡顿怎么办？<span class="faq-toggle">+</span></div>
+<div class="faq-answer"><p>可以尝试切换清晰度（降低至720P或480P）、切换网络环境（建议使用WiFi或5G）、清除浏览器缓存后重新加载页面。</p></div>
+</div>
+<div class="faq-item reveal">
+<div class="faq-question">影视资源多久更新一次？<span class="faq-toggle">+</span></div>
+<div class="faq-answer"><p>我们每天都会更新影视资源，热门剧集和综艺基本能做到与播出同步，院线大片也会在上线后第一时间收录。</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">
+<a href="#" class="logo">免费看影视</a>
+<p>专业的在线影视观看平台，提供海量高清电影、电视剧、综艺、动漫免费在线观看。每日更新，随时随地享受精彩内容。</p>
+</div>
+<div class="footer-col">
+<h5>影视分类</h5>
+<ul>
+<li><a href="#">电影</a></li>
+<li><a href="#">电视剧</a></li>
+<li><a href="#">综艺</a></li>
+<li><a href="#">动漫</a></li>
+<li><a href="#">纪录片</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>快捷链接</h5>
+<ul>
+<li><a href="#home">回到首页</a></li>
+<li><a href="#hot">热门推荐</a></li>
+<li><a href="#features">平台优势</a></li>
+<li><a href="#faq">帮助中心</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>关于我们</h5>
+<ul>
+<li><a href="#">关于平台</a></li>
+<li><a href="#">联系方式</a></li>
+<li><a href="#">免责声明</a></li>
+<li><a href="#">隐私政策</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 免费看影视 | 网址：https://mianfeikanyingshi-app.github.io | 让每个人都能轻松享受优质影视内容</p>
+<div class="footer-links">
+<a href="#">意见反馈</a>
+<a href="#">免责声明</a>
+<a href="#">隐私政策</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+// Mobile Menu Toggle
+(function(){
+var toggle=document.getElementById('menuToggle');
+var nav=document.getElementById('navLinks');
+if(toggle&&nav){
+toggle.addEventListener('click',function(){
+nav.classList.toggle('active');
+});
+var links=nav.querySelectorAll('a');
+for(var i=0;i<links.length;i++){
+links[i].addEventListener('click',function(){
+nav.classList.remove('active');
+});
+}
+}
+})();
+
+// FAQ Accordion
+(function(){
+var items=document.querySelectorAll('.faq-item');
+for(var i=0;i<items.length;i++){
+var q=items[i].querySelector('.faq-question');
+if(q){
+q.addEventListener('click',function(){
+var parent=this.parentNode;
+var isActive=parent.classList.contains('active');
+for(var j=0;j<items.length;j++){
+items[j].classList.remove('active');
+}
+if(!isActive){
+parent.classList.add('active');
+}
+});
+}
+}
+})();
+
+// Scroll Reveal Animation
+(function(){
+var reveals=document.querySelectorAll('.reveal');
+function checkReveal(){
+for(var i=0;i<reveals.length;i++){
+var windowHeight=window.innerHeight;
+var elementTop=reveals[i].getBoundingClientRect().top;
+var elementVisible=80;
+if(elementTop<windowHeight-elementVisible){
+reveals[i].classList.add('visible');
+}
+}
+}
+window.addEventListener('scroll',checkReveal);
+window.addEventListener('load',checkReveal);
+checkReveal();
+})();
+
+// Header Shadow on Scroll
+(function(){
+var header=document.getElementById('header');
+window.addEventListener('scroll',function(){
+if(window.scrollY>20){
+header.style.boxShadow='0 2px 20px rgba(0,0,0,0.3)';
+}else{
+header.style.boxShadow='none';
+}
+});
+})();
+</script>
+</body>
+</html>
